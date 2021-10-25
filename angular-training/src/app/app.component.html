@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" [(ngModel)]="userData.name">
+            <input type="text" [(ngModel)]="userData.url">
+            <p>your user name is {{userData.name}} and your website is {{userData.url}}</p>
+            <button (click)="addData()">Add card</button>
+        </div>
+        <ng-container *ngFor="let item of childData;let i = index">
+            <div class="col-md-3">
+                <app-child [cardData]="item" (deleteCard)="getDataFromChild($event)"></app-child>
+            </div>
+        </ng-container>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="card" [id]="cardData.id">
+    <img [src]="cardData.img" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{cardData.title}}</h5>
+        <p class="card-text">{{cardData.desc}}</p>
+        <a [href]="cardData.url" class="btn btn-primary">Go somewhere</a>
+        <button class="btn btn-danger" (click)="getId(cardData.id)">Delete</button>
+    </div>
+</div>
